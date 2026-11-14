@@ -1,23 +1,23 @@
 class AgentLeds < Formula
   desc "Status lights for coding agents on a SidePulse Pro, replacing its own software"
   homepage "https://github.com/mikestopcontinues/agent-leds"
-  version "0.1.0"
+  version "0.2.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/mikestopcontinues/agent-leds/releases/download/v0.1.0/agent-leds-aarch64-apple-darwin.tar.xz"
-      sha256 "86e1cb59f0d1f81258eea700ef27f1e92eeafadc16a2f5a5b3bb63d558284038"
+      url "https://github.com/mikestopcontinues/agent-leds/releases/download/v0.2.0/agent-leds-aarch64-apple-darwin.tar.xz"
+      sha256 "e9037cb8cb9838f48f58503e9ef3edbe29018bc58ca68c943d2b7c48ffc15656"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mikestopcontinues/agent-leds/releases/download/v0.1.0/agent-leds-x86_64-apple-darwin.tar.xz"
-      sha256 "e6ec441889e97e40bdda9b7ab7d9b275119bfc0197bc4d26f8e906c44a351e29"
+      url "https://github.com/mikestopcontinues/agent-leds/releases/download/v0.2.0/agent-leds-x86_64-apple-darwin.tar.xz"
+      sha256 "b10f10948b148710fa3f926c4467af164f28ee37edc1f848af10ab2a0a4f5a37"
     end
   end
   license "MIT"
 
   BINARY_ALIASES = {
     "aarch64-apple-darwin": {},
-    "x86_64-apple-darwin": {}
-  }
+    "x86_64-apple-darwin":  {},
+  }.freeze
 
   def target_triple
     cpu = Hardware::CPU.arm? ? "aarch64" : "x86_64"
