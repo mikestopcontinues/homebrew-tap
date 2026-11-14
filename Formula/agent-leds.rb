@@ -1,15 +1,15 @@
 class AgentLeds < Formula
   desc "Status lights for coding agents on a SidePulse Pro, replacing its own software"
   homepage "https://github.com/mikestopcontinues/agent-leds"
-  version "0.3.0"
+  version "0.4.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/mikestopcontinues/agent-leds/releases/download/v0.3.0/agent-leds-aarch64-apple-darwin.tar.xz"
-      sha256 "f3f41ecff74f49400e40bad55ee3d2fdd3d6ffa120cbdbde69645bd88f89c310"
+      url "https://github.com/mikestopcontinues/agent-leds/releases/download/v0.4.0/agent-leds-aarch64-apple-darwin.tar.xz"
+      sha256 "fc9955dd3a58e45a4be3b85d6ba3d1a1478470bf0d0e10dbbdea551861884fb8"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mikestopcontinues/agent-leds/releases/download/v0.3.0/agent-leds-x86_64-apple-darwin.tar.xz"
-      sha256 "5f05859240ce94e22acadeb321738526df5fff1920cef8f0b2d9f008820f7c80"
+      url "https://github.com/mikestopcontinues/agent-leds/releases/download/v0.4.0/agent-leds-x86_64-apple-darwin.tar.xz"
+      sha256 "5d1559169a4b8c6126e4ef1dce26cebd31c788a8513e8b2adba8448dca4f8c4d"
     end
   end
   license "MIT"
